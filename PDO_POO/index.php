@@ -1,11 +1,11 @@
 <?php
 
+
+//Métodos
+//loadById - Usuario();
+//select - Sql();
+//execQuery - Sql();
 require_once("config.php");
 
-$root = new Usuario();
-
-$root->loadById(2);
-
-echo($root);
 
 ?>

@@ -48,6 +48,7 @@ class Usuario
         $this->senha_usuario = $value;
     }
 
+    //Buscar usuarios por ID
     public function loadById($id)
     {
         $sql = new Sql();
@@ -68,6 +69,7 @@ class Usuario
         }
     }
 
+    //Transformando os dados gerados em String
     public function __toString()
     {
         return json_encode(array(

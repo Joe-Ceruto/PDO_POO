@@ -10,6 +10,7 @@ class Sql extends PDO {
 
     }
 
+    //Setando para comandos mais de 1 parametro
     private function setParams($statment, $parameters = array()) {
 
         foreach ($parameters as $key => $value) {
@@ -20,12 +21,14 @@ class Sql extends PDO {
 
     }
 
+    //Setando para comandos com 1 parametro
     private function setParam($statment, $key, $value){
 
         $statment->bindParam($key, $value);
 
     }
 
+    //Executar querys SQL
     public function execQuery($rawQuery, $params = array()) {
 
         $stmt = $this->conn->prepare($rawQuery);
@@ -38,6 +41,7 @@ class Sql extends PDO {
 
     }
 
+    //Executar um Select
     public function select($rawQuery, $params = array()):array
     {
 
